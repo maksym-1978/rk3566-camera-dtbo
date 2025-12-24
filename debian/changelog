@@ -1,17 +1,34 @@
 rk3566-camera-dtbo (0.6.0) bookworm; urgency=medium
 
-  * Sync version with rsdk release v0.6.0
   * Add TC358743 HDMI-CSI bridge EDID auto-setup
   * Add systemd service for automatic EDID configuration
   * Support for 1080p30, 1080p25, 720p60 EDID modes
 
  -- MYSh LLC <maksym.shevchenko@mysh.studio>  Tue, 24 Dec 2024 21:30:00 +0200
 
-rk3566-camera-dtbo (1.0.0) bookworm; urgency=medium
+rk3566-camera-dtbo (0.5.0) bookworm; urgency=medium
+
+  * No changes for this package in v0.5.0
+
+ -- MYSh LLC <maksym.shevchenko@mysh.studio>  Tue, 24 Dec 2024 20:49:00 +0200
+
+rk3566-camera-dtbo (0.4.2) bookworm; urgency=medium
+
+  * No changes for this package in v0.4.2
+
+ -- MYSh LLC <maksym.shevchenko@mysh.studio>  Tue, 24 Dec 2024 20:41:00 +0200
+
+rk3566-camera-dtbo (0.4.1) bookworm; urgency=medium
+
+  * No changes for this package in v0.4.1
+
+ -- MYSh LLC <maksym.shevchenko@mysh.studio>  Tue, 24 Dec 2024 20:18:00 +0200
+
+rk3566-camera-dtbo (0.4.0) bookworm; urgency=medium
 
   * Initial release
   * Camera overlays: IMX219, OV5647, IMX477, GC2053
   * HDMI-CSI bridge: TC358743
   * camera-overlay CLI utility for easy management
 
- -- Maksym Shevchenko <maksym.shevchenko@mysh.studio>  Tue, 24 Dec 2024 12:00:00 +0000
+ -- MYSh LLC <maksym.shevchenko@mysh.studio>  Tue, 24 Dec 2024 20:01:00 +0200
