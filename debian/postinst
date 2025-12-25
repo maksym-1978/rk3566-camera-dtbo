@@ -3,12 +3,12 @@ set -e
 
 case "$1" in
     configure)
-        # Enable TC358743 setup service
+        # Reload systemd to register the service (but don't enable it)
         if [ -d /run/systemd/system ]; then
             systemctl daemon-reload || true
-            systemctl enable tc358743-setup.service || true
-            echo "TC358743 setup service enabled"
-            echo "The service will run automatically on boot when TC358743 overlay is enabled"
+            echo "TC358743 setup service installed (disabled by default)"
+            echo "To enable: systemctl enable tc358743-setup.service"
+            echo "The service should only be enabled after enabling the TC358743 overlay"
         fi
         ;;
     abort-upgrade|abort-remove|abort-deconfigure)

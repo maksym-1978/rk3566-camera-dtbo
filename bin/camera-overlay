@@ -43,7 +43,7 @@ Commands:
 Available overlays:
 EOF
     if [ -d "$DTBO_DIR" ]; then
-        for dtbo in "$DTBO_DIR"/rk3566-camera-*.dtbo "$DTBO_DIR"/rk3566-hdmi-*.dtbo 2>/dev/null; do
+        for dtbo in "$DTBO_DIR"/rk3566-camera-*.dtbo "$DTBO_DIR"/rk3566-hdmi-*.dtbo ; do
             if [ -f "$dtbo" ]; then
                 name=$(basename "$dtbo" .dtbo)
                 echo "  - $name"
@@ -86,7 +86,7 @@ cmd_list() {
     fi
 
     local found=0
-    for dtbo in "$DTBO_DIR"/rk3566-camera-*.dtbo "$DTBO_DIR"/rk3566-hdmi-*.dtbo 2>/dev/null; do
+    for dtbo in "$DTBO_DIR"/rk3566-camera-*.dtbo "$DTBO_DIR"/rk3566-hdmi-*.dtbo ; do
         if [ -f "$dtbo" ]; then
             name=$(basename "$dtbo" .dtbo)
             size=$(stat -c%s "$dtbo" 2>/dev/null || echo "?")
@@ -138,7 +138,7 @@ cmd_status() {
     echo ""
 
     local found=0
-    for dtbo in "$DTBO_DIR"/rk3566-camera-*.dtbo "$DTBO_DIR"/rk3566-hdmi-*.dtbo 2>/dev/null; do
+    for dtbo in "$DTBO_DIR"/rk3566-camera-*.dtbo "$DTBO_DIR"/rk3566-hdmi-*.dtbo ; do
         if [ -f "$dtbo" ]; then
             name=$(basename "$dtbo" .dtbo)
             if is_overlay_enabled "$name"; then
@@ -191,7 +191,7 @@ cmd_enable() {
     # Check for exclusive overlays (only one camera at a time on CSI2)
     echo -e "${BLUE}Checking for conflicting overlays...${NC}"
     local has_conflict=0
-    for dtbo in "$DTBO_DIR"/rk3566-camera-*.dtbo "$DTBO_DIR"/rk3566-hdmi-*.dtbo 2>/dev/null; do
+    for dtbo in "$DTBO_DIR"/rk3566-camera-*.dtbo "$DTBO_DIR"/rk3566-hdmi-*.dtbo ; do
         if [ -f "$dtbo" ]; then
             local existing=$(basename "$dtbo" .dtbo)
             if [ "$existing" != "$overlay" ] && is_overlay_enabled "$existing"; then
