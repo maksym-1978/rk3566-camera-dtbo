@@ -1,3 +1,12 @@
+rk3566-camera-dtbo (0.7.2) bookworm; urgency=medium
+
+  * Disable all DTBOs and EDID by default
+  * Add new EDID profiles for 1080p50 and 1080p60
+  * Update existing EDID profiles
+  * Remove auto-enable of tc358743-setup.service
+
+ -- MYSh LLC <maksym.shevchenko@mysh.studio>  Thu, 26 Dec 2025 00:30:00 +0200
+
 rk3566-camera-dtbo (0.7.1) bookworm; urgency=medium
 
   * Sync version with rsdk release v0.7.1
