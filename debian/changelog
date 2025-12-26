@@ -1,3 +1,9 @@
+rk3566-camera-dtbo (0.8.0) bookworm; urgency=medium
+
+  * Sync version with rsdk release v0.8.0
+
+ -- MYSh LLC <maksym.shevchenko@mysh.studio>  Fri, 26 Dec 2025 20:03:10 +0200
+
 rk3566-camera-dtbo (0.7.2) bookworm; urgency=medium
 
   * Disable all DTBOs and EDID by default
